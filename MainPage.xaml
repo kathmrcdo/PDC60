@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC60_REST_API.MainPage">
+
+    <StackLayout Orientation="Horizontal">
+        <Button Text="Add" Clicked="OnAdd"></Button>
+        <Entry x:Name="xName" Placeholder="Username"></Entry>
+        <Entry x:Name="xEmail" Placeholder="Email"></Entry>
+
+
+        <ListView x:Name="Post_List">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding username}" Detail="{Binding email}">
+                        </TextCell>
+                 
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+    </StackLayout>
+
+</ContentPage>
